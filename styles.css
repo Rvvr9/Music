@@ -536,4 +536,25 @@ footer p {
     margin-bottom: 110px;
   }
 
+  /* Tablet view (2 columns) */
+@media (max-width: 1024px) {
+  .proj {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile view (1 column) */
+@media (max-width: 768px) {
+  .proj {
+    grid-template-columns: 1fr;
+  }
+
+  /* Optional: center project cards and remove side gaps */
+  .proj > .responsive {
+    justify-self: center;
+    width: 100%;
+  }
+}
+
+
 }
