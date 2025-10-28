@@ -535,26 +535,28 @@ footer p {
   footer {
     margin-bottom: 110px;
   }
-
-  /* Tablet view (2 columns) */
+  /* Tablet view: 2 columns */
 @media (max-width: 1024px) {
   .proj {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile view (1 column) */
+/* Mobile view: 1 column */
 @media (max-width: 768px) {
   .proj {
     grid-template-columns: 1fr;
+    padding: 10px;
+    row-gap: 20px;
   }
 
-  /* Optional: center project cards and remove side gaps */
-  .proj > .responsive {
-    justify-self: center;
+  .proj .gallery {
     width: 100%;
+    justify-self: center;
   }
 }
+
+
 
 
 }
