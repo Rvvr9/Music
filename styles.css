@@ -268,13 +268,18 @@ header img {
   --proj-gap: 20px; /* single source of truth */
 }
 
-/* Image Gallery */
+
 .proj {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: var(--proj-gap); /* horizontal spacing */
-  row-gap: var(--proj-gap);    /* vertical spacing */
+  column-gap: var(--proj-gap);
+  row-gap: var(--proj-gap);
   padding: var(--proj-gap);
+  grid-auto-flow: dense;
+}
+
+.proj > .responsive:last-child {
+  grid-column: 2 / 3; /* centers in the middle column */
 }
 
 div.gallery {
@@ -299,6 +304,7 @@ div.gallery {
 
 [id^="waveform"] {
   margin-bottom: 8px;
+  height: 90px; /* add this */
 }
 
 div.gallery img {
@@ -530,8 +536,4 @@ footer p {
     margin-bottom: 110px;
   }
 
-  /* Center the last item if it doesn't fill the row */
-.proj > .responsive:last-child {
-  justify-self: center;
-}
 }

@@ -221,8 +221,9 @@
       const src = btn.dataset.src;
       const waveformId = `#waveform${index}`;
 
+      const waveformEl = document.getElementById(`waveform${index}`);
       const ws = WaveSurfer.create({
-        container: waveformId,
+        container: waveformEl,
         waveColor: '#000000',
         progressColor: '#A02222',
         url: src,
