@@ -530,5 +530,8 @@ footer p {
     margin-bottom: 110px;
   }
 
-  
+  /* Center the last item if it doesn't fill the row */
+.proj > .responsive:last-child {
+  justify-self: center;
+}
 }
